@@ -21,15 +21,20 @@ echo "=============================Install Vagrant==============================
 vagrant plugin install vagrant-libvirt #The vagrant-libvirt plugin is required when using KVM on Linux
 vagrant plugin install vagrant-mutate #Convert vagrant boxes to work with different providers
 
-# https://app.vagrantup.com/opensuse/boxes/Tumbleweed.x86_64
-vagrant box add  "opensuse/Tumbleweed.x86_64" --provider=libvirt
-vagrant up --provider=libvirt "vg-opensuse-01"
-# https://app.vagrantup.com/opensuse/boxes/Kubic.x86_64
-vagrant box add  "opensuse/Kubic.x86_64" --provider=libvirt
-vagrant up --provider=libvirt "vg-opensusekubicx8664"
-# https://app.vagrantup.com/opensuse/boxes/MicroOS.x86_64
-vagrant box add  "opensuse/MicroOS.x86_64" --provider=libvirt
-vagrant up --provider=libvirt "vg-microosx8664"
+# # https://app.vagrantup.com/opensuse/boxes/Tumbleweed.x86_64
+# vagrant box add  "opensuse/Tumbleweed.x86_64" --provider=libvirt
+# vagrant up --provider=libvirt "vg-opensuse-01"
+# # https://app.vagrantup.com/opensuse/boxes/Kubic.x86_64
+# vagrant box add  "opensuse/Kubic.x86_64" --provider=libvirt
+# vagrant up --provider=libvirt "vg-opensusekubicx8664"
+# # https://app.vagrantup.com/opensuse/boxes/MicroOS.x86_64
+# vagrant box add  "opensuse/MicroOS.x86_64" --provider=libvirt
+# vagrant up --provider=libvirt "vg-microosx8664"
+
+# # https://github.com/chef/bento/tree/master/packer_templates/opensuse
+vagrant box add  "bento/opensuse-leap-15.1" --provider=virtualbox
+vagrant mutate "bento/opensuse-leap-15.1"  libvirt
+vagrant up --provider=libvirt "vg-opensuseleap"
 
 # # https://app.vagrantup.com/suse/boxes/sles12sp2
 # vagrant box add  "suse/sles12sp2" --provider=libvirt

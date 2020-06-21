@@ -103,3 +103,16 @@
   # server_bootstrap: "provisioning/deploy.yml"
   # ansible_version: "2.9.2"
   # ansible_compatibility_mode: "2.0"
+- vagrant_box_host: "vg-opensuseleap"
+  vagrant_box: "bento/opensuse-leap-15.1"
+  vbox_name: "vbox-opensuseleap"
+  vbox_ram: 2048
+  vbox_cpu: 2
+  network_type: "private_network"
+  vagrant_box_ip: 192.168.18.89
+  guest_port: 80
+  host_port: 8882
+  server_script: "provisioning/susegeneric.sh"
+  # server_bootstrap: "provisioning/deploy.yml"
+  # ansible_version: "2.9.2"
+  # ansible_compatibility_mode: "2.0"
