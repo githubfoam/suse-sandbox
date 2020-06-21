@@ -2,7 +2,7 @@
 suse experience
 
 Travis (.com) dev branch:
-[![Build Status](https://travis-ci.com/githubfoam/suse-sandbox.svg?branch=dev)](https://travis-ci.com/githubfoam/suse-sandbox)  
+[![Build Status](https://travis-ci.com/githubfoam/suse-sandbox.svg?branch=master)](https://travis-ci.com/githubfoam/suse-sandbox)  
 
 ~~~~
 Kubic supports AArch64
