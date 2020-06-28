@@ -23,7 +23,7 @@ vagrant box add  "opensuse/MicroOS.x86_64" --provider=libvirt
 vagrant up --provider=libvirt "vg-microosx8664"
 
 # https://github.com/chef/bento/tree/master/packer_templates/opensuse
-# vagrant box add  "bento/opensuse-leap-15.1" --provider=virtualbox
+vagrant box add  "bento/opensuse-leap-15.1" --provider=virtualbox
 vagrant mutate "bento/opensuse-leap-15.1"  libvirt
 vagrant up --provider=libvirt "vg-opensuseleap"
 
