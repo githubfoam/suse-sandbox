@@ -8,14 +8,14 @@ notifications:
   slack:
     on_failure: always
 
-fleet_script_tasks : &fleet_script_tasks
-      script:
-        - sudo make deploy-vagrant
-fleet_install_tasks : &fleet_install_tasks
-      install:
-        - pip install -r requirements.txt
-        - pip list
-        - python --version
+# fleet_script_tasks : &fleet_script_tasks
+#       script:
+#         - sudo make deploy-vagrant
+# fleet_install_tasks : &fleet_install_tasks
+#       install:
+#         - pip install -r requirements.txt
+#         - pip list
+#         - python --version
 matrix:
   fast_finish: true
   include:
@@ -33,7 +33,12 @@ matrix:
         - pip3 install virtualenv
         - virtualenv -p $(which python3) ~venvpy3
         - source ~venvpy3/bin/activate
-      <<: *fleet_install_tasks
-      <<: *fleet_script_tasks
+        - pip install -r requirements.txt
+      # <<: *fleet_install_tasks
+      # <<: *fleet_script_tasks
+      script:
+          - sudo make deploy-libvirt
+          - sudo make deploy-vagrant
+          - sudo make deploy-boxes
       after_success:
         - deactivate

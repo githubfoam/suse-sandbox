@@ -1,17 +1,4 @@
 ---
-- vagrant_box_host: "vg-arch-01"
-  vagrant_box: "archlinux/archlinux"
-  vbox_name: "vbox-arch-01"
-  vbox_ram: 2048
-  vbox_cpu: 2
-  network_type: "private_network"
-  vagrant_box_ip: 192.168.18.81
-  guest_port: 80
-  host_port: 8882
-  server_script: "provisioning/archlinux.sh"
-  # server_bootstrap: "provisioning/deploy.yml"
-  # ansible_version: "2.9.2"
-  # ansible_compatibility_mode: "2.0"
 - vagrant_box_host: "vg-opensuse-01"
   vagrant_box: "opensuse/Tumbleweed.x86_64"
   vbox_name: "vbox-opensuse-01"
@@ -25,6 +12,7 @@
   # server_bootstrap: "provisioning/deploy.yml"
   # ansible_version: "2.9.2"
   # ansible_compatibility_mode: "2.0"
+
 - vagrant_box_host: "vg-sles-01"
   vagrant_box: "suse/sles12sp2"
   vbox_name: "vbox-sles-01"
@@ -33,11 +21,12 @@
   network_type: "private_network"
   vagrant_box_ip: 192.168.18.83
   guest_port: 80
-  host_port: 8882
+  host_port: 8883
   server_script: "provisioning/susegeneric.sh"
   # server_bootstrap: "provisioning/deploy.yml"
   # ansible_version: "2.9.2"
   # ansible_compatibility_mode: "2.0"
+
 - vagrant_box_host: "vg-opensusekubicx8664"
   vagrant_box: "opensuse/Kubic.x86_64"
   vbox_name: "vbox-opensusekubicx8664"
@@ -46,11 +35,12 @@
   network_type: "private_network"
   vagrant_box_ip: 192.168.18.84
   guest_port: 80
-  host_port: 8882
+  host_port: 8884
   server_script: "provisioning/susegeneric.sh"
   # server_bootstrap: "provisioning/deploy.yml"
   # ansible_version: "2.9.2"
   # ansible_compatibility_mode: "2.0"
+
 - vagrant_box_host: "vg-opensusekubicaarch64"
   vagrant_box: "opensuse/Kubic.aarch64"
   vbox_name: "vbox-opensusekubicaarch64"
@@ -64,6 +54,7 @@
   # server_bootstrap: "provisioning/deploy.yml"
   # ansible_version: "2.9.2"
   # ansible_compatibility_mode: "2.0"
+
 - vagrant_box_host: "vg-microosx8664"
   vagrant_box: "opensuse/MicroOS.x86_64"
   vbox_name: "vbox-microosx8664"
@@ -77,6 +68,7 @@
   # server_bootstrap: "provisioning/deploy.yml"
   # ansible_version: "2.9.2"
   # ansible_compatibility_mode: "2.0"
+
 - vagrant_box_host: "vg-microosaarch64"
   vagrant_box: "opensuse/MicroOS.aarch64"
   vbox_name: "vbox-microosaarch64"
@@ -90,6 +82,7 @@
   # server_bootstrap: "provisioning/deploy.yml"
   # ansible_version: "2.9.2"
   # ansible_compatibility_mode: "2.0"
+
 - vagrant_box_host: "vg-tumbleweedaarch64"
   vagrant_box: "opensuse/Tumbleweed.aarch64"
   vbox_name: "vbox-tumbleweedaarch64"
@@ -103,6 +96,7 @@
   # server_bootstrap: "provisioning/deploy.yml"
   # ansible_version: "2.9.2"
   # ansible_compatibility_mode: "2.0"
+
 - vagrant_box_host: "vg-opensuseleap"
   vagrant_box: "bento/opensuse-leap-15.1"
   vbox_name: "vbox-opensuseleap"
