@@ -10,4 +10,4 @@ deploy-vagrant:
 push-image:
 	docker push $(IMAGE)
 
-.PHONY: deploy-vagrant archlinux-req push-image
+.PHONY: deploy-boxes deploy-libvirt deploy-vagrant push-image
