@@ -17,4 +17,4 @@ zypper install -y bcc-tools bcc-examples git
 
 #https://github.com/iovisor/bcc
 git clone https://github.com/iovisor/bcc.git && cd bcc/examples/tracing
-./bitehist.py
+#./bitehist.py #vg-opensuseleap: ImportError: No module named bcc
