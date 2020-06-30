@@ -10,13 +10,13 @@ vagrant plugin install vagrant-libvirt #The vagrant-libvirt plugin is required w
 vagrant plugin install vagrant-mutate #Convert vagrant boxes to work with different providers
 
 # https://app.vagrantup.com/opensuse/boxes/Kubic.x86_64
-vagrant box add  "opensuse/Kubic.x86_64" --provider=libvirt
-vagrant up --provider=libvirt "vg-opensusekubicx8664"
-vagrant ssh -c "whoami && kubeadm init"
+# vagrant box add  "opensuse/Kubic.x86_64" --provider=libvirt
+# vagrant up --provider=libvirt "vg-opensusekubicx8664"
+# vagrant ssh -c "whoami && kubeadm init"
 
 # # https://app.vagrantup.com/opensuse/boxes/Tumbleweed.x86_64
-# vagrant box add  "opensuse/Tumbleweed.x86_64" --provider=libvirt
-# vagrant up --provider=libvirt "vg-opensuse-01"
+vagrant box add  "opensuse/Tumbleweed.x86_64" --provider=libvirt
+vagrant up --provider=libvirt "vg-opensuse-01"
 #
 # # https://app.vagrantup.com/opensuse/boxes/MicroOS.x86_64
 # vagrant box add  "opensuse/MicroOS.x86_64" --provider=libvirt

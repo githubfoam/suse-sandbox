@@ -9,6 +9,15 @@ echo "          \  (oo)\_______                                                 
 echo "             (__)\       )\/\                                                      "
 echo "                 ||----w |                                                         "
 echo "                 ||     ||                                                         "
+echo "=============================bcc============================================================"
+
+#https://github.com/iovisor/bcc/blob/master/INSTALL.md#opensuse---binary
+zypper ref
+zypper in bcc-tools bcc-examples
+
+#https://github.com/iovisor/bcc
+git clone https://github.com/iovisor/bcc.git && cd examples/tracing
+./bitehist.py
 echo "=============================ansible ============================================================="
 # hostnamectl set-hostname vg-arch-01
 # echo "192.168.18.81 vg-arch-01.local vg-arch-01" |sudo tee -a /etc/hosts
