@@ -18,8 +18,8 @@ zypper --non-interactive --quiet install bison cmake flex gcc gcc-c++ git libelf
 llvm-devel clang-devel pkg-config python-devel python-setuptools python3-devel \
 python3-setuptools
 
-zypper in luajit-devel       # for lua support in openSUSE Leap 42.2 or later
-zypper in lua51-luajit-devel # for lua support in openSUSE Tumbleweed
+zypper --non-interactive --quiet install luajit-devel       # for lua support in openSUSE Leap 42.2 or later
+zypper --non-interactive --quiet install lua51-luajit-devel # for lua support in openSUSE Tumbleweed
 
 #Install and compile BCC
 git clone https://github.com/iovisor/bcc.git
@@ -31,5 +31,5 @@ cmake -DPYTHON_CMD=python3 .. # build python3 binding
 
 pushd src/python/
 make
-sudo make install
+make install
 popd
