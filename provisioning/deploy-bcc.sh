@@ -23,13 +23,12 @@ zypper --non-interactive --quiet install lua51-luajit-devel # for lua support in
 
 #Install and compile BCC
 git clone https://github.com/iovisor/bcc.git
-mkdir bcc/build; cd bcc/build
-cmake -DLUAJIT_INCLUDE_DIR=`pkg-config --variable=includedir luajit` \ # for lua support
-make
-make install
-cmake -DPYTHON_CMD=python3 .. # build python3 binding
-
-pushd src/python/
-make
-make install
-popd
+mkdir bcc/build && cd bcc/build
+# cmake -DLUAJIT_INCLUDE_DIR=`pkg-config --variable=includedir luajit` \ # for lua support
+# make
+# make install
+# cmake -DPYTHON_CMD=python3 .. # build python3 binding
+# pushd src/python/
+# make
+# make install
+# popd
