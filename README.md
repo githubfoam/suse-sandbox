@@ -4,6 +4,15 @@ suse experience
 Travis (.com) dev branch:
 [![Build Status](https://travis-ci.com/githubfoam/suse-sandbox.svg?branch=dev)](https://travis-ci.com/githubfoam/suse-sandbox)  
 
+
+~~~~
+
+examples/tracing/bitehist.py: Block I/O size histogram
+
+BPF-based Linux IO analysis, networking, monitoring
+https://github.com/iovisor/bcc
+~~~~
+
 ~~~~
 Kubic supports AArch64
 https://kubic.opensuse.org/blog/2019-01-30-kubiconaarch64/
